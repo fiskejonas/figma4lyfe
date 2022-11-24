@@ -1,7 +1,7 @@
 ---
 // Component Imports
 import Button from "../components/Button.astro";
-import ButtonMobile from "../components/ButtonMobile.astro"
+import ButtonMobile from "../components/ButtonMobile.astro";
 import Card from "../components/Card.astro";
 import CardMobile from "../components/CardMobile.astro";
 import Main from "../layouts/main.astro";
@@ -11,7 +11,7 @@ import "../styles/global.css";
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<div class="grid place-items-center h-screen content-center gap-5">
+<div class="grid place-items-center content-center gap-5">
   <Card
     subTitle="Henrik Carlsen"
     titel="Kommode af teak"
@@ -30,12 +30,28 @@ import "../styles/global.css";
     vurdering="DKK 2.000"
   />
   <Card
-    subTitle="Oesteuropaeisk"
-    titel="Reflektor bordlampe"
-    beskrivelse="Bordlampe med kobber skærm, stamme af metal, fod af messing. Vipbar. H. 52 cm, O. 32 cm"
+    subTitle="Theodor Philipsen"
+    titel="Vejparti med faar"
+    beskrivelse="Theodor Philipsen (1840-1920). Olie på malerpap, monteret på laerred. 25 x 35,5 (33,5 x 44) cm."
     btnDeskDefault={true}
-    imgLamp={true}
-    vurdering="DKK 4.500"
+    imgPainting={true}
+    vurdering="DKK 9.000"
+  />
+  <Card
+    subTitle="Armbaand"
+    titel="14 kt. guld"
+    beskrivelse="Armbaand af 14 kt. guld og hvidguld.L. 18.5 cm, B. 0,9 cm.Har sikkerhedshaspe. Vaegt 13,3g."
+    btnDeskDefault={true}
+    imgBracelet={true}
+    vurdering="DKK 3.200"
+  />
+  <Card
+    subTitle="Christian Frederik Heise"
+    titel="Hammerslaaede soelvskeer"
+    beskrivelse="Skoenvirke. Prydret med blomster og bladvaerk samt hammerslaaet laf. Stemplet CHF samt tretaarsstemplet (19)22-(19)25.Brugsspor. Samlet vaegt 371g."
+    btnDeskDefault={true}
+    imgSpoons={true}
+    vurdering="DKK 1.800"
   />
 </div>
 
@@ -52,7 +68,7 @@ import "../styles/global.css";
       imgDresser={true}
     />
   </div>
-  
+
   <div class="">
     <CardMobile
       h2="Vejparti med faar"
@@ -65,7 +81,7 @@ import "../styles/global.css";
       imgPainting={true}
     />
   </div>
-  
+
   <div class="">
     <CardMobile
       h2="Reflektor lampe"
@@ -78,7 +94,7 @@ import "../styles/global.css";
       imgLamp={true}
     />
   </div>
-  
+
   <div class="">
     <CardMobile
       h2="14 kt. guld"
@@ -91,7 +107,7 @@ import "../styles/global.css";
       imgBracelet={true}
     />
   </div>
-  
+
   <div class="">
     <CardMobile
       h2="Soelvskeer"
