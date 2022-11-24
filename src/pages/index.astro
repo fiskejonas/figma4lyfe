@@ -2,19 +2,21 @@
 // Component Imports
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
+import CardMobile from "../components/CardMobile.astro";
 import Main from "../layouts/main.astro";
 import "../styles/global.css";
-
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
+
 <div class="grid font-dosis place-items-center h-screen content-center">
   <Card
     titel="Kommode af teak... Henrik Clausen."
     beskrivelse="Kommoden har tre skuffer. H. 68 cm. B. 80 cm. D. 36 cm. Spejl: 35 x 74 cm. Fremstår med mindre brugsspor."
     deluxe={true}
     btnDeskDefault={true}
+    imgDresser={true}
   />
   <Card
     titel="Kommode af teak. Henrik Clausen."
