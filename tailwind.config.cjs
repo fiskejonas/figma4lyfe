@@ -12,7 +12,7 @@ module.exports = {
     },
     fontFamily: {
       dosis: "Dosis, sans-serif",
-      vasirman: "Vazirman, sans-serif",
+      vasirman: "Vazirmatn, sans-serif",
     },
   },
   plugins: [],
