@@ -2,4 +2,16 @@
 const { titel, beskrivelse, deluxe, variant, knapTekst } = Astro.props;
 ---
 
-<button class="bg-slate-200 p-2 rounded">{knapTekst}</button>
+<button data-variant={variant} class="bg-slate-200 text-xl p-2 rounded"
+  >{knapTekst}</button
+>
+
+<style>
+  [data-variant="primary"] {
+    font-size: 16px;
+  }
+
+  [data-variant="secondary"] {
+    font-size: 32px;
+  }
+</style>
