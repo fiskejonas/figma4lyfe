@@ -20,6 +20,8 @@
 }
 
 :root {
+  --hero-h1: 2rem;
+  --hero-h2: 5rem;
   --card-button-desktop-font-size-default: 32px;
   --card-button-desktop-line-height-default: 40px;
   --card-button-desktop-default-background-color: #d1b245;
