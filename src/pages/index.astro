@@ -10,13 +10,31 @@ import "../styles/global.css";
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<div class="grid place-items-center h-screen content-center">
+<div class="grid place-items-center h-screen content-center gap-5">
   <Card
-    titel="Kommode af teak... Henrik Clausen."
-    beskrivelse="Kommoden har tre skuffer. H. 68 cm. B. 80 cm. D. 36 cm. Spejl: 35 x 74 cm. Fremstår med mindre brugsspor."
+    subTitle="Henrik Carlsen"
+    titel="Kommode af teak"
+    beskrivelse="Kommoden har tre skuffer. H. 68 cm. B. 80 cm. D. 36 cm. Spejl: 35 x 74 cm. Fremstaar med mindre brugsspor."
     deluxe={true}
     btnDeskDefault={true}
     imgDresser={true}
+    vurdering="DKK 4.500"
+  />
+  <Card
+    subTitle="Oesteuropaeisk"
+    titel="Reflektor bordlampe"
+    beskrivelse="Bordlampe med kobber skærm, stamme af metal, fod af messing. Vipbar. H. 52 cm, O. 32 cm"
+    btnDeskHighest={true}
+    imgLamp={true}
+    vurdering="DKK 2.000"
+  />
+  <Card
+    subTitle="Oesteuropaeisk"
+    titel="Reflektor bordlampe"
+    beskrivelse="Bordlampe med kobber skærm, stamme af metal, fod af messing. Vipbar. H. 52 cm, O. 32 cm"
+    btnDeskDefault={true}
+    imgLamp={true}
+    vurdering="DKK 4.500"
   />
 </div>
 

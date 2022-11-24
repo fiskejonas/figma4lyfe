@@ -17,11 +17,11 @@ module.exports = {
         "18px",
         { lineHeight: "24px", letterSpacing: "0.006em" },
       ],
-      cardDescriptionDestkop: [
+      cardDescriptionDesktkop: [
         "16px",
         { lineHeight: "22px", letterSpacing: "0.0025em" },
       ],
-      cardSubtitleDestkop: [
+      cardSubtitleDesktkop: [
         "21px",
         { lineHeight: "24px", letterSpacing: "0em" },
       ],

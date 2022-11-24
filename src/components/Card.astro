@@ -14,41 +14,121 @@ const {
   imgPainting,
   imgBracelet,
   imgSpoons,
+  vurdering,
+  subTitle,
 } = Astro.props;
 ---
 
-<article class="rounded shadow-lg h-[265px] max-w-[900px] flex overflow-hidden">
+<article class="rounded shadow-lg h-full max-w-[900px] overflow-hidden flex">
   {
     imgDresser == true && (
-      <div class="card_img w-[50%]">
-        <img class="h-full object-cover" src="../img/kommode.webp" alt="" />
+      <div class="card_img w-full">
+        <img
+          class="h-full aspect-[5/4] object-cover"
+          src="../img/kommode.webp"
+          alt=""
+        />
+      </div>
+    )
+  }
+  {
+    imgLamp == true && (
+      <div class="card_img w-full">
+        <img
+          class="h-full aspect-[5/4] object-cover"
+          src="../img/lampe.webp"
+          alt=""
+        />
+      </div>
+    )
+  }
+  {
+    imgPainting == true && (
+      <div class="card_img w-full">
+        <img
+          class="h-full aspect-[5/4] object-cover"
+          src="../img/maleri.webp"
+          alt=""
+        />
+      </div>
+    )
+  }
+  {
+    imgSpoons == true && (
+      <div class="card_img w-full">
+        <img
+          class="h-full aspect-[5/4] object-cover"
+          src="../img/skeer.webp"
+          alt=""
+        />
+      </div>
+    )
+  }
+  {
+    imgBracelet == true && (
+      <div class="card_img w-full">
+        <img
+          class="h-full aspect-[5/4] object-cover"
+          src="../img/guld.webp"
+          alt=""
+        />
       </div>
     )
   }
 
   <div class="card_tekst p-5 w-full">
     <div class="textWrapper flex flex-col">
-      <div class="locationAndTime gap-5 flex">
-        <div class="house flex">
+      <div
+        class="locationAndTime text-cardIconCaptionDesktop font-dosis gap-5 mb-5 flex"
+      >
+        <div class="house flex gap-2">
           <img src="../img/location.svg" alt="location icon" />
-          <h5>Herlev</h5>
+          <p>Herlev</p>
         </div>
-        <div class="time flex">
+        <div class="time flex gap-2">
           <img src="../img/time.svg" alt="" />
-          <h5>11d23min22sek</h5>
+          <p>11d23min22sek</p>
         </div>
       </div>
-      <h3 class="text-2xl font-bold">{titel}</h3>
-      <p class="max-w-[250px]">{beskrivelse}</p>
+      <h2 class="text-cardH2Desktop text-moerkegraa font-vasirman">
+        {subTitle}
+      </h2>
+      <h3
+        class="text-cardH3Desktop text-moerkegraa mb-5 font-bold font-vasirman"
+      >
+        {titel}
+      </h3>
+      <p
+        class="max-w-[250px] text-cardDescriptionDesktkop text-moerkegraa font-dosis"
+      >
+        {beskrivelse}
+      </p>
       {deluxe == true && <p>deLuxe</p>}
     </div>
 
-    <div class="flex justify-end">
-      {
-        btnDeskDefault == true && (
-          <Button variant="primary" knapTekst="DKK 2.400" />
-        )
-      }
+    <div class="flex justify-end w-full">
+      <div class="flex flex-col gap-2">
+        <div
+          class="vurdering font-bold text-moerkegraa font-vasirman text-cardIconCaptionDesktop"
+        >
+          <p>
+            <span class="text-firmaroed text-cardSubtitleDesktkop font-bold"
+              >Vurdering:</span
+            >
+            {vurdering}
+          </p>
+        </div>
+        {
+          btnDeskDefault == true && (
+            <Button variant="primary" knapTekst="DKK 2.400" />
+          )
+        }
+        {
+          btnDeskHighest == true && (
+            <Button variant="secondary" knapTekst="DU ER FOERENDE" />
+          )
+        }
+      </div>
     </div>
   </div>
 </article>
