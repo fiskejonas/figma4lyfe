@@ -10,6 +10,10 @@ module.exports = {
         hvid: "#F0F0F0",
       },
     },
+    fontFamily: {
+      dosis: "Dosis, sans-serif",
+      vasirman: "Vazirman, sans-serif",
+    },
   },
   plugins: [],
 };
