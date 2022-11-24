@@ -1,14 +1,13 @@
 ---
-import ButtonMobile from "./ButtonMobile.astro";
+import ButtonMobile from "./Button.astro";
 
 const {
   titel,
-  beskrivelse,
   deluxe,
   variant,
   knapTekst,
-  btnDeskDefault,
-  btnDeskHighest,
+  btnMobileDefault,
+  btnMobileHighest,
   imgDresser,
   imgLamp,
   imgPainting,
@@ -21,49 +20,21 @@ const {
   {
     imgDresser == true && (
       <div class="card_img">
-        <img class="h-full object-cover" src="../img/kommode.png" alt="" />
+        <img class="h-full object-cover" src="../img/kommode.webp" alt="" />
       </div>
     )
   }
-  {
-    imgLamp == true && (
-      <div class="card_img">
-        <img class="h-full object-cover" src="../img/lampe.png" alt="" />
-      </div>
-    )
-  }
-  {
-    imgPainting == true && (
-      <div class="card_img">
-        <img class="h-full object-cover" src="../img/painting.png" alt="" />
-      </div>
-    )
-  }
-  {
-    imgBracelet == true && (
-      <div class="card_img">
-        <img class="h-full object-cover" src="../img/bracelet.png" alt="" />
-      </div>
-    )
-  }
-  {
-    imgSpoons == true && (
-      <div class="card_img">
-        <img class="h-full object-cover" src="../img/spoons.png" alt="" />
-      </div>
-    )
-  }
+
   <div class="card_tekst p-5">
     <h3 class="text-2xl font-bold">{titel}</h3>
-    <p>{beskrivelse}</p>
     {deluxe == true && <p>deLuxe</p>}
     {
-      btnDeskDefault == true && (
+      btnMobileDefault == true && (
         <ButtonMobile variant="primary" knapTekst="DKK 2.400" />
       )
     }
     {
-      btnDeskHighest == true && (
+      btnMobileHighest == true && (
         <ButtonMobile variant="secondary" knapTekst="DU HAR HOEJESTE BUD" />
       )
     }
