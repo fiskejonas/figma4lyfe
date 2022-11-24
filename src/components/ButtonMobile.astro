@@ -2,16 +2,23 @@
 const { titel, deluxe, variant, knapTekst } = Astro.props;
 ---
 
-<button data-variant={variant} class="bg-slate-200 text-cardButtonMobile p-2 rounded"
+<button data-variant={variant} class="p-2 rounded text-hvid px-4 font-dosis"
   >{knapTekst}</button
 >
 
 <style>
   [data-variant="primary"] {
-    font-size: 10px;
+    font-size: 16px;
+    background-color: var(--card-button-mobile-default-background-color);
   }
 
   [data-variant="secondary"] {
     font-size: 10px;
+    background-color: var(--card-button-mobile-leading-background-color);
+  }
+
+  [data-variant="third"] {
+    font-size: 10px;
+    background-color: var(--card-button-mobile-overbid-background-color);
   }
 </style>

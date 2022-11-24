@@ -39,8 +39,15 @@ module.exports = {
         "13px",
         { lineHeight: "18px", letterSpacing: "0.0035em" },
       ],
-      card: ["28px", { lineHeight: "32px", letterSpacing: "0.004em" }],
-      cardButtonMobile: [
+      cardSubtitleMobile: [
+        "13px",
+        { lineHeight: "16px", letterSpacing: "0em" },
+      ],
+      cardDefaultButtonMobile: [
+        "16px",
+        { lineHeight: "16px", letterSpacing: "0.0.006em" },
+      ],
+      cardLeadingButtonMobile: [
         "10px",
         { lineHeight: "16px", letterSpacing: "0.0.006em" },
       ],
