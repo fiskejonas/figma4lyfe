@@ -30,8 +30,8 @@ module.exports = {
         { lineHeight: "40px", letterSpacing: "0em" },
       ],
       cardLeadingButtonDesktop: [
-        "32px",
-        { lineHeight: "40px", letterSpacing: "0em" },
+        "24px",
+        { lineHeight: "30px", letterSpacing: "0em" },
       ],
       cardH2Mobile: ["16px", { lineHeight: "18px", letterSpacing: "0em" }],
       cardH3Mobile: ["16px", { lineHeight: "18px", letterSpacing: "0em" }],
@@ -40,7 +40,7 @@ module.exports = {
         { lineHeight: "18px", letterSpacing: "0.0035em" },
       ],
       card: ["28px", { lineHeight: "32px", letterSpacing: "0.004em" }],
-      cardLeadingButtonMobile: [
+      cardButtonMobile: [
         "10px",
         { lineHeight: "16px", letterSpacing: "0.0.006em" },
       ],

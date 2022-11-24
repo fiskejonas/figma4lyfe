@@ -18,3 +18,14 @@
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/vazirmatn-v6-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+:root {
+  --card-button-desktop-font-size-default: 32px;
+  --card-button-desktop-line-height-default: 40px;
+
+  --card-leading-button-desktop-font-size: 24px;
+  --card-leading-button-desktop-line-height: 30px;
+
+  --card-button-mobile-font-size: 10px;
+  --card-button-mobile-line-height: 16px;
+}
