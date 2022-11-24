@@ -1,0 +1,71 @@
+---
+import ButtonMobile from "./ButtonMobile.astro";
+
+const {
+  titel,
+  beskrivelse,
+  deluxe,
+  variant,
+  knapTekst,
+  btnDeskDefault,
+  btnDeskHighest,
+  imgDresser,
+  imgLamp,
+  imgPainting,
+  imgBracelet,
+  imgSpoons,
+} = Astro.props;
+---
+
+<article class="rounded shadow-lg h-[250px] max-w-2xl flex overflow-hidden">
+  {
+    imgDresser == true && (
+      <div class="card_img">
+        <img class="h-full object-cover" src="../img/kommode.png" alt="" />
+      </div>
+    )
+  }
+  {
+    imgLamp == true && (
+      <div class="card_img">
+        <img class="h-full object-cover" src="../img/lampe.png" alt="" />
+      </div>
+    )
+  }
+  {
+    imgPainting == true && (
+      <div class="card_img">
+        <img class="h-full object-cover" src="../img/painting.png" alt="" />
+      </div>
+    )
+  }
+  {
+    imgBracelet == true && (
+      <div class="card_img">
+        <img class="h-full object-cover" src="../img/bracelet.png" alt="" />
+      </div>
+    )
+  }
+  {
+    imgSpoons == true && (
+      <div class="card_img">
+        <img class="h-full object-cover" src="../img/spoons.png" alt="" />
+      </div>
+    )
+  }
+  <div class="card_tekst p-5">
+    <h3 class="text-2xl font-bold">{titel}</h3>
+    <p>{beskrivelse}</p>
+    {deluxe == true && <p>deLuxe</p>}
+    {
+      btnDeskDefault == true && (
+        <ButtonMobile variant="primary" knapTekst="DKK 2.400" />
+      )
+    }
+    {
+      btnDeskHighest == true && (
+        <ButtonMobile variant="secondary" knapTekst="DU HAR HOEJESTE BUD" />
+      )
+    }
+  </div>
+</article>
