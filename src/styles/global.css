@@ -22,10 +22,14 @@
 :root {
   --card-button-desktop-font-size-default: 32px;
   --card-button-desktop-line-height-default: 40px;
+  --card-button-desktop-default-background-color: #d1b245;
 
   --card-leading-button-desktop-font-size: 24px;
   --card-leading-button-desktop-line-height: 30px;
+  --card-leading-button-desktop-background-color: #449b71;
 
   --card-button-mobile-font-size: 10px;
   --card-button-mobile-line-height: 16px;
+  --card-button-mobile-default-background-color: #d1b245;
+  --card-button-mobile-leading-background-color: #449b71;
 }

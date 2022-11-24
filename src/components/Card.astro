@@ -17,28 +17,38 @@ const {
 } = Astro.props;
 ---
 
-<article class="rounded shadow-lg h-[250px] max-w-2xl flex overflow-hidden">
+<article class="rounded shadow-lg h-[265px] max-w-[900px] flex overflow-hidden">
   {
     imgDresser == true && (
-      <div class="card_img w-full">
+      <div class="card_img w-[50%]">
         <img class="h-full object-cover" src="../img/kommode.webp" alt="" />
       </div>
     )
   }
 
   <div class="card_tekst p-5 w-full">
-    <h3 class="text-2xl font-bold">{titel}</h3>
-    <p>{beskrivelse}</p>
-    {deluxe == true && <p>deLuxe</p>}
-    {
-      btnDeskDefault == true && (
-        <Button variant="primary" knapTekst="DKK 2.400" />
-      )
-    }
-    {
-      btnDeskHighest == true && (
-        <Button variant="secondary" knapTekst="DU HAR HOEJESTE BUD" />
-      )
-    }
+    <div class="textWrapper flex flex-col">
+      <div class="locationAndTime gap-5 flex">
+        <div class="house flex">
+          <img src="../img/location.svg" alt="location icon" />
+          <h5>Herlev</h5>
+        </div>
+        <div class="time flex">
+          <img src="../img/time.svg" alt="" />
+          <h5>11d23min22sek</h5>
+        </div>
+      </div>
+      <h3 class="text-2xl font-bold">{titel}</h3>
+      <p class="max-w-[250px]">{beskrivelse}</p>
+      {deluxe == true && <p>deLuxe</p>}
+    </div>
+
+    <div class="flex justify-end">
+      {
+        btnDeskDefault == true && (
+          <Button variant="primary" knapTekst="DKK 2.400" />
+        )
+      }
+    </div>
   </div>
 </article>
