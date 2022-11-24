@@ -1,5 +1,5 @@
 ---
-import ButtonMobile from "./Button.astro";
+import ButtonMobile from "./ButtonMobile.astro";
 
 const {
   h2,
@@ -7,8 +7,12 @@ const {
   deluxe,
   variant,
   knapTekst,
+  vurdering,
+  location,
+  time,
   btnMobileDefault,
   btnMobileHighest,
+  btnMobileOverbid,
   imgDresser,
   imgLamp,
   imgPainting,
@@ -17,29 +21,50 @@ const {
 } = Astro.props;
 ---
 
-<article class="rounded shadow-lg max-w-sm flex">
+<article class="rounded shadow-lg max-w-xs flex">
   {
     imgDresser == true && (
-      <div class="card_img w-2/4">
-        <img class="h-full object-cover rounded" src="../img/kommode.webp" alt="" />
+      <div class="card_img aspect-[5/4]">
+        <img class="w-full h-full object-cover rounded" src="../img/kommode.webp" alt="" />
       </div>
-    )
-  }
+    ) }
+    { imgLamp == true && (
+      <div class="card_img aspect-[5/4]">
+        <img class="w-full h-full object-cover rounded" src="../img/lampe.webp" alt="" />
+      </div>
+    ) }
+    { imgPainting == true && (
+      <div class="card_img aspect-[5/4]">
+        <img class="w-full h-full object-cover rounded" src="../img/maleri.webp" alt="" />
+      </div>
+    ) }
+    { imgBracelet == true && (
+      <div class="card_img aspect-[5/4]">
+        <img class="w-full h-full object-cover rounded" src="../img/guld.webp" alt="" />
+      </div>
+    ) }
+    { imgSpoons == true && (
+      <div class="card_img aspect-[5/4]">
+        <img class="w-full h-full object-cover rounded" src="../img/skeer.webp" alt="" />
+      </div>
+    ) }
+  
 
-  <div class="card_tekst p-3 text-center">
-   <div class="flex flex-col font-dosis items-center justify-evenly">
+  <div class="card_tekst p-3 w-full text-center">
+   <div class="flex flex-col pb-2 font-dosis items-center justify-evenly">
      <div class="flex gap-1">
-      <img class="w-2" src="../img/location.svg" alt="">
-      <p class="text-cardIconCaptionMobile opacity-60">Herlev</p>
+      <img class="w-2" src="../img/location.svg" alt="location icon">
+      <p class="text-cardIconCaptionMobile opacity-60">{location}</p>
     </div>
     <div class="flex gap-1">
-      <img class="w-2" src="../img/time.svg" alt="">
-      <p class="text-cardIconCaptionMobile opacity-60">11d 23min 22sek</p>
+      <img class="w-2" src="../img/time.svg" alt="time icon">
+      <p class="text-cardIconCaptionMobile opacity-60">{time}</p>
     </div>
    </div>
 
-     <h3 class="text-cardH3Mobile">{h3}</h3>
-  <h2 class="text-cardH2Mobile font-bold">{h2}</h2>
+     <h3 class="text-cardH3Mobile font">{h3}</h3>
+  <h2 class="text-cardH2Mobile pb-3 font-extrabold">{h2}</h2>
+  <h4 class="text-cardSubtitleMobile pb-[0.2rem] font-vasirman"><span class="text-firmaroed">Vurdering: </span>{vurdering}</h4>
     {
       btnMobileDefault == true && (
         <ButtonMobile variant="primary" knapTekst="DKK 2.400" />
@@ -48,6 +73,11 @@ const {
     {
       btnMobileHighest == true && (
         <ButtonMobile variant="secondary" knapTekst="DU HAR HOEJESTE BUD" />
+      )
+    }
+      {
+      btnMobileOverbid == true && (
+        <ButtonMobile variant="third" knapTekst="DU ER OVERBUDT" />
       )
     }
   </div>

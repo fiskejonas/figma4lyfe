@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import Button from "../components/Button.astro";
+import ButtonMobile from "../components/ButtonMobile.astro"
 import Card from "../components/Card.astro";
 import CardMobile from "../components/CardMobile.astro";
 import Main from "../layouts/main.astro";
@@ -38,12 +39,69 @@ import "../styles/global.css";
   />
 </div>
 
-<div class="grid place-items-center h-screen content-center">
-  <CardMobile
-    h2="Kommode af teak"
-    h3="Henrik Clausen"
-    deluxe={true}
-    btnMobileDefault={true}
-    imgDresser={true}
-  />
+<div class="flex flex-col justify-center items-center gap-5">
+  <div class="">
+    <CardMobile
+      h2="Kommode af teak"
+      h3="Henrik Clausen"
+      deluxe={true}
+      location="Herlev"
+      time="11d 23min 22sek"
+      vurdering="2.400"
+      btnMobileDefault={true}
+      imgDresser={true}
+    />
+  </div>
+  
+  <div class="">
+    <CardMobile
+      h2="Vejparti med faar"
+      h3="Theodor Philipsen"
+      deluxe={true}
+      location="Aarhus"
+      time="3d 9t 25min"
+      vurdering="9.000"
+      btnMobileHighest={true}
+      imgPainting={true}
+    />
+  </div>
+  
+  <div class="">
+    <CardMobile
+      h2="Reflektor lampe"
+      h3="Oesteuropaeisk"
+      deluxe={true}
+      location="Odense"
+      time="33min 55sek"
+      vurdering="2.000"
+      btnMobileOverbid={true}
+      imgLamp={true}
+    />
+  </div>
+  
+  <div class="">
+    <CardMobile
+      h2="14 kt. guld"
+      h3="Armbaand"
+      deluxe={true}
+      location="Odense"
+      time="1d 4t 15sek"
+      vurdering="4.200"
+      btnMobileDefault={true}
+      imgBracelet={true}
+    />
+  </div>
+  
+  <div class="">
+    <CardMobile
+      h2="Soelvskeer"
+      h3="Christian Heise"
+      deluxe={true}
+      location="Aarhus"
+      time="8min 44sek"
+      vurdering="1.800"
+      btnMobileOverbid={true}
+      imgSpoons={true}
+    />
+  </div>
 </div>
