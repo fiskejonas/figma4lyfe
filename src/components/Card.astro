@@ -1,18 +1,34 @@
 ---
 import Button from "./Button.astro";
-const { titel, beskrivelse, deluxe, variant, knapTekst, primarys, secondarys } =
-  Astro.props;
+const {
+  titel,
+  beskrivelse,
+  deluxe,
+  variant,
+  knapTekst,
+  btnDeskDefault,
+  btnDeskHighest,
+  HEJ123,
+} = Astro.props;
 ---
 
 <article class="rounded shadow-lg h-[250px] max-w-2xl flex overflow-hidden">
   <div class="card_img">
-    <img class="h-full object-cover" src="../img/kommode.png" alt="" />
+    <img class="h-full object-cover" src={HEJ123} alt="" />
   </div>
   <div class="card_tekst p-5">
     <h3 class="text-2xl font-bold">{titel}</h3>
     <p>{beskrivelse}</p>
     {deluxe == true && <p>deLuxe</p>}
-    {primarys == true && <Button variant="primary" knapTekst="DKK 2.400" />}
-    {secondarys == true && <Button variant="secondary" knapTekst="DKK 2.400" />}
+    {
+      btnDeskDefault == true && (
+        <Button variant="primary" knapTekst="DKK 2.400" />
+      )
+    }
+    {
+      btnDeskHighest == true && (
+        <Button variant="secondary" knapTekst="DU HAR HOEJESTE BUD" />
+      )
+    }
   </div>
 </article>
