@@ -2,7 +2,8 @@
 import ButtonMobile from "./Button.astro";
 
 const {
-  titel,
+  h2,
+  h3,
   deluxe,
   variant,
   knapTekst,
@@ -16,18 +17,29 @@ const {
 } = Astro.props;
 ---
 
-<article class="rounded shadow-lg h-[250px] max-w-2xl flex overflow-hidden">
+<article class="rounded shadow-lg max-w-sm flex">
   {
     imgDresser == true && (
-      <div class="card_img">
-        <img class="h-full object-cover" src="../img/kommode.webp" alt="" />
+      <div class="card_img w-2/4">
+        <img class="h-full object-cover rounded" src="../img/kommode.webp" alt="" />
       </div>
     )
   }
 
-  <div class="card_tekst p-4">
-    <h3 class="text-2xl font-bold">{titel}</h3>
-    {deluxe == true && <p>deLuxe</p>}
+  <div class="card_tekst p-3 text-center">
+   <div class="flex flex-col font-dosis items-center justify-evenly">
+     <div class="flex gap-1">
+      <img class="w-2" src="../img/location.svg" alt="">
+      <p class="text-cardIconCaptionMobile opacity-60">Herlev</p>
+    </div>
+    <div class="flex gap-1">
+      <img class="w-2" src="../img/time.svg" alt="">
+      <p class="text-cardIconCaptionMobile opacity-60">11d 23min 22sek</p>
+    </div>
+   </div>
+
+     <h3 class="text-cardH3Mobile">{h3}</h3>
+  <h2 class="text-cardH2Mobile font-bold">{h2}</h2>
     {
       btnMobileDefault == true && (
         <ButtonMobile variant="primary" knapTekst="DKK 2.400" />
